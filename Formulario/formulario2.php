@@ -44,7 +44,7 @@ border=0 align=center cellPadding=0 cellSpacing=0 id=intContent>
               ':email' => $email,
               ':senha' => $senha
             ));
-            //$sql = "insert into cliente values (null,'".$nome."','".$endereco."','".$numero."','".$bairro."','".$fone."','".$cidade."','".$email."','".$senha."')";
+            
             print "Usuario criado com sucesso!";
             echo $stmt->rowCount();
           }catch(PDOException $e){

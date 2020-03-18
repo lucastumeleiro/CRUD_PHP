@@ -14,26 +14,20 @@ include("conecta.php");
         </colgroup>
         <thead>
             <tr>
+                <th>Codigo</th>
                 <th>Nome</th>
-                <th>CPF</th>
-                <th>...</th>
+                <th>E-mail</th>
             </tr>
         <thead>
-        <tfoot>
-            <tr>
-                <td>Nome</td>
-                <td>CPF</td>
-                <td>...</td>
-            </tr>
-        <tfoot>
         <tbody>
             <?php
-                $consulta = $conn->query('select cod,nome from cliente');
+                $consulta = $conn->query('select cod,nome,email from cliente');
                 while ($aux = $consulta->fetch(PDO::FETCH_ASSOC)) {
                     echo "
                         <tr>
                             <td>".$aux["cod"]."</td>
                             <td>".$aux["nome"]."</td>
+                            <td>".$aux["email"]."</td>
                         </tr>
                     ";
                 }
